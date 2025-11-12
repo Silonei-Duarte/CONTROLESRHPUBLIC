@@ -1,0 +1,33 @@
+# Ignora arquivos do PyCharm
+.idea/
+
+# Ignora ambientes virtuais
+env/
+.venv/
+
+# Ignora cache do Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Ignora tudo, exceto arquivos permitidos abaixo
+/*
+
+# Libera arquivos específicos na raiz
+!*.py
+!*.gitignore
+!*.bin
+!*.spec
+!*.xlsx
+!*.json
+!*.ico
+!*.txt
+
+# Libera pastas e conteúdos importantes
+!/hooks/
+!/hooks/**
+!/Essenciais/
+!/Essenciais/**
+!/Dependencias/
+!/Dependencias/**
