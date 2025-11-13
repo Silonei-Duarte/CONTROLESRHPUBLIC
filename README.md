@@ -164,6 +164,6 @@ Os dados são extraídos diretamente do banco Oracle (tabelas R034FUN, R038AFA, 
   <li>Relatórios PDF e Excel</li>
 </ul>
 
-<p>Necessário revisar cada rotina, pois a maioria depende de relatórios específicos gerados no ERP. <br>
+<p>Necessário revisar cada rotina, pois a maioria depende de relatórios específicos gerados no ERP que estão na pasta 'Dependencias'. <br>
 Eles devem ser importados e parametrizados para gerar os arquivos nos diretórios lidos pela aplicação. <br>
 Também é necessário configurar a conexão no arquivo <strong>Database.py</strong>.</p>
