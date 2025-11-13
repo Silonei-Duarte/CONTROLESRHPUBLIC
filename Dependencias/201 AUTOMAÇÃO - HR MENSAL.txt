@@ -1,0 +1,37 @@
+Definir data DataInicial;
+Definir data DataFinal;
+
+@DATA HOJE FINAL@
+DataHoje(DataFinal);
+DataFinal = DataFinal - 1;
+
+@DATA INICIAL@
+diahoje = DiaSis;
+meshoje = MesSis;
+
+Se (diahoje = 1){
+    meshoje = MesSis - 1;
+    }
+      
+MontaData(01, meshoje, AnoSis, DataInicial);
+
+@rELATORIO@
+SetaDataTelaEntrada("EDatInr", DataInicial);
+SetaDataTelaEntrada("EDatFir", DataFinal);
+
+SetaNumeroTelaEntrada("EspNivTot",00);
+SetaNumeroTelaEntrada("EspNivQue",05);
+SetaNumeroTelaEntrada("ETipLis",7);
+SetaNumeroTelaEntrada("ESalPag",0);
+
+SetaAlfaTelaEntrada("EDtSSit","N");
+SetaAlfaTelaEntrada("ESomExc","N");
+SetaAlfaTelaEntrada("ELisDem","S");
+SetaAlfaTelaEntrada("EMosUsu","N");
+
+SetaNumeroTelaEntrada("GRDLOTE",0000);
+
+SetaAlfaTelaEntrada("EAbrEmp","10,16,17");
+SetaAlfaTelaEntrada("EAbrSit","17,302,303,304,80");
+
+ExecutaRelatorio("HRAP602.APU","N");

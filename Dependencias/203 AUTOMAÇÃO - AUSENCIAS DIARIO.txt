@@ -1,0 +1,78 @@
+@DIARIO@
+Definir Alfa NomeDia;
+NomeDia = "DIARIO";
+DataHoje(DataInicialDia);
+DataHoje(DataFinalDia);
+DataInicialDia = DataInicialDia - 1;
+DataFinalDia = DataFinalDia - 1;
+SetaDataTelaEntrada("EDatInr",DataInicialDia);
+SetaDataTelaEntrada("EDatFir",DataFinalDia);
+SetaNumeroTelaEntrada("EspNivTot",00);
+SetaNumeroTelaEntrada("EspNivQue",05);
+SetaNumeroTelaEntrada("ETipLis",2);
+SetaAlfaTelaEntrada("ESomExc","N");
+SetaAlfaTelaEntrada("ESemMot","N");
+SetaAlfaTelaEntrada("ELisDem","N");
+SetaAlfaTelaEntrada("EMosUsu","N");
+SetaNumeroTelaEntrada("GRDLOTE",0000);
+SetaAlfaTelaEntrada("EAbrEmp","10,16,17");
+SetaAlfaTelaEntrada("EAbrTcl","1");
+SetaAlfaTelaEntrada("EAbrSit","1,2,4,14,15,19,13,12,11,18,20,52,51,54,62,63,64,65,69,501,502,503,504,505,506,515,565,911,918,919");
+SetaAlfaTelaEntrada("EPeriodo",NomeDia);
+ExecutaRelatorio("HRAP605.APU","N");
+
+
+@SEMANAL@
+Definir data DataInicialSem;
+Definir data DataFinalSem;
+Definir Alfa NomeSem;
+NomeSem = "SEMANAL";
+DataHoje(DataFinalSem);
+DataFinalSem = DataFinalSem - 1;
+DataHoje(DataInicialSem);
+DataInicialSem = DataInicialSem - 7;
+SetaDataTelaEntrada("eDatInr", DataInicialSem); 
+SetaDataTelaEntrada("EDatFir", DataFinalSem);
+SetaNumeroTelaEntrada("EspNivTot",00);
+SetaNumeroTelaEntrada("EspNivQue",05);
+SetaNumeroTelaEntrada("ETipLis",2);
+SetaAlfaTelaEntrada("ESomExc","N");
+SetaAlfaTelaEntrada("ESemMot","N");
+SetaAlfaTelaEntrada("ELisDem","N");
+SetaAlfaTelaEntrada("EMosUsu","N");
+SetaNumeroTelaEntrada("GRDLOTE",0000);
+SetaAlfaTelaEntrada("EAbrEmp","10,16,17");
+SetaAlfaTelaEntrada("EAbrTcl","1");
+SetaAlfaTelaEntrada("EAbrSit","1,2,4,14,15,19,13,12,11,18,20,52,51,54,62,63,64,65,69,501,502,503,504,505,506,515,565,911,918,919");
+SetaAlfaTelaEntrada("EPeriodo",NomeSem);
+ExecutaRelatorio("HRAP605.APU","N");
+
+
+@MENSAL@
+Definir data DataInicialMes;
+Definir data DataFinalMes;
+Definir Alfa NomeMes;
+NomeMes = "MENSAL";
+DataHoje(DataFinalMes);
+DataFinalMes = DataFinalMes - 1;
+diahojeMes = DiaSis;
+meshojeMes = MesSis;
+Se (diahojeMes = 1){
+    meshojeMes = MesSis - 1;
+    }      
+MontaData(01, meshojeMes, AnoSis, DataInicialMes);
+SetaDataTelaEntrada("EDatInr", DataInicialMes);
+SetaDataTelaEntrada("EDatFir", DataFinalMes);
+SetaNumeroTelaEntrada("EspNivTot",00);
+SetaNumeroTelaEntrada("EspNivQue",05);
+SetaNumeroTelaEntrada("ETipLis",2);
+SetaAlfaTelaEntrada("ESomExc","N");
+SetaAlfaTelaEntrada("ESemMot","N");
+SetaAlfaTelaEntrada("ELisDem","N");
+SetaAlfaTelaEntrada("EMosUsu","N");
+SetaNumeroTelaEntrada("GRDLOTE",0000);
+SetaAlfaTelaEntrada("EAbrEmp","10,16,17");
+SetaAlfaTelaEntrada("EAbrTcl","1");
+SetaAlfaTelaEntrada("EAbrSit","1,2,4,14,15,19,13,12,11,18,20,52,51,54,62,63,64,65,69,501,502,503,504,505,506,515,565,911,918,919");
+SetaAlfaTelaEntrada("EPeriodo",NomeMes);
+ExecutaRelatorio("HRAP605.APU","N");

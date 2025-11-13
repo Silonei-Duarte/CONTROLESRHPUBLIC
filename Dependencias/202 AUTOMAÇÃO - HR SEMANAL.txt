@@ -1,0 +1,31 @@
+Definir data DataFinal; 
+Definir data DataInicial;
+
+@DATA HOJE FINAL@
+DataHoje(DataFinal);
+DataFinal = DataFinal - 1;
+
+@ULTIMA SEGUNDA FEIRA@ 
+DataHoje(DataInicial);
+DataInicial = DataInicial - 7;
+
+@RELATORIO@
+SetaDataTelaEntrada("eDatInr", DataInicial); 
+SetaDataTelaEntrada("EDatFir", DataFinal);
+
+SetaNumeroTelaEntrada("EspNivTot",00);
+SetaNumeroTelaEntrada("EspNivQue",05);
+SetaNumeroTelaEntrada("ETipLis",7);
+SetaNumeroTelaEntrada("ESalPag",0);
+
+SetaAlfaTelaEntrada("EDtSSit","N");
+SetaAlfaTelaEntrada("ESomExc","N");
+SetaAlfaTelaEntrada("ELisDem","S");
+SetaAlfaTelaEntrada("EMosUsu","N");
+
+SetaNumeroTelaEntrada("GRDLOTE",0000);
+
+SetaAlfaTelaEntrada("EAbrEmp","10,16,17");
+SetaAlfaTelaEntrada("EAbrSit","17,302,303,304,80");
+
+ExecutaRelatorio("HRAP603.APU","N");
